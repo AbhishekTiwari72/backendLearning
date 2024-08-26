@@ -1,7 +1,7 @@
 //One way to do it using Promise    
 
 const asyncHandler = (fn) => (req, res, next) => {
-    Promise.resolve(fn(req, res, next)).catch((error)=>{
+  return  Promise.resolve(fn(req, res, next)).catch((error)=>{
         next(error)
     })
 }
